@@ -8,6 +8,7 @@
 
 #import "ToDoListTableViewController.h"
 #import "ToDoItem.h"
+#import "AddToDoItemViewController.h"
 
 @interface ToDoListTableViewController ()
 
@@ -32,6 +33,12 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue{
     //返回list
+    AddToDoItemViewController *source = [segue sourceViewController];       //取回源视图控制器AddToDoItemViewController
+    ToDoItem *item = source.toDoItem;       //取回控制器的待办事项
+    if (item != nil) {
+        [self.toDoItems addObject:item];    //如果项目存在，添加到 toDoItems 数组
+        [self.tableView reloadData];        //重新载入表格中的数据
+    }
 }
 
 - (void)viewDidLoad {
