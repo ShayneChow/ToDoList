@@ -294,6 +294,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="ZF6-Qv-cbO" id="4Be-Rr-cUy"/>
+                        <outlet property="textField" destination="0re-s3-H4I" id="Jia-e3-6V6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <exit id="87U-3L-HkW" userLabel="Exit" sceneMemberID="exit"/>
