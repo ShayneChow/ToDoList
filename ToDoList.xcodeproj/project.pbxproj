@@ -10,7 +10,6 @@
 		263AFAF81A1214EB002E067C /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 263AFAF71A1214EB002E067C /* ToDoItem.m */; };
 		2658C7A21A1064FB0022DB29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2658C7A11A1064FB0022DB29 /* main.m */; };
 		2658C7A51A1064FB0022DB29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2658C7A41A1064FB0022DB29 /* AppDelegate.m */; };
-		2658C7A81A1064FB0022DB29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2658C7A71A1064FB0022DB29 /* ViewController.m */; };
 		2658C7AB1A1064FB0022DB29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2658C7A91A1064FB0022DB29 /* Main.storyboard */; };
 		2658C7AD1A1064FB0022DB29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2658C7AC1A1064FB0022DB29 /* Images.xcassets */; };
 		2658C7B01A1064FB0022DB29 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2658C7AE1A1064FB0022DB29 /* LaunchScreen.xib */; };
@@ -37,8 +36,6 @@
 		2658C7A11A1064FB0022DB29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2658C7A31A1064FB0022DB29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2658C7A41A1064FB0022DB29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2658C7A61A1064FB0022DB29 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2658C7A71A1064FB0022DB29 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2658C7AA1A1064FB0022DB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2658C7AC1A1064FB0022DB29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2658C7AF1A1064FB0022DB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -92,8 +89,6 @@
 			children = (
 				2658C7A31A1064FB0022DB29 /* AppDelegate.h */,
 				2658C7A41A1064FB0022DB29 /* AppDelegate.m */,
-				2658C7A61A1064FB0022DB29 /* ViewController.h */,
-				2658C7A71A1064FB0022DB29 /* ViewController.m */,
 				2658C7A91A1064FB0022DB29 /* Main.storyboard */,
 				2658C7C81A10C27D0022DB29 /* ToDoListTableViewController.h */,
 				2658C7C91A10C27D0022DB29 /* ToDoListTableViewController.m */,
@@ -235,7 +230,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				263AFAF81A1214EB002E067C /* ToDoItem.m in Sources */,
-				2658C7A81A1064FB0022DB29 /* ViewController.m in Sources */,
 				2658C7A51A1064FB0022DB29 /* AppDelegate.m in Sources */,
 				2658C7A21A1064FB0022DB29 /* main.m in Sources */,
 				2658C7CA1A10C27D0022DB29 /* ToDoListTableViewController.m in Sources */,
