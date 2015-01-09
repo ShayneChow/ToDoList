@@ -120,7 +120,7 @@
                 UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
                 
                 // Take a snapshot of the selected row using helper method.
-                snapshot = [self customSnapshotFromView:cell];
+                snapshot = [self customSnapshoFromView:cell];
                 
                 // Add the snapshot as subview, centered at cell's center...
                 __block CGPoint center = cell.center;
@@ -185,16 +185,26 @@
     }
 }
 
-- (UIView *)customSnapshotFromView:(UIView *)inputView {
-    
-    UIView *snapshot = [inputView snapshotViewAfterScreenUpdates:YES];
-    snapshot.layer.masksToBounds = NO;
-    snapshot.layer.cornerRadius = 0.0;
-    snapshot.layer.shadowOffset = CGSizeMake(-5.0, 0.0);
-    snapshot.layer.shadowRadius = 5.0;
-    snapshot.layer.shadowOpacity = 0.4;
-    
-    return snapshot;
+- (UIView *)customSnapshoFromView:(UIView *)inputView {
+    UIView *snapShot;
+    if ([[UIDevice currentDevice].systemVersion floatValue]<7.0f) {
+        snapShot = [[UIView alloc]initWithFrame:inputView.frame];
+        UIGraphicsBeginImageContextWithOptions(inputView.bounds.size, YES, 1);
+        [inputView.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        UIImageView *shot = [[UIImageView alloc]initWithImage:viewImage];
+        [snapShot addSubview:shot];
+    }
+    else {
+        snapShot = [inputView snapshotViewAfterScreenUpdates:YES];
+        snapShot.layer.masksToBounds = NO;
+        snapShot.layer.cornerRadius = 0.0;
+        snapShot.layer.shadowOffset = CGSizeMake(-5.0, 0.0);
+        snapShot.layer.shadowRadius = 5.0;
+        snapShot.layer.shadowOpacity = 0.4;
+    }
+    return snapShot;
 }
 
 @end
